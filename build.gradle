@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+}
+
+group 'debugger.quorum'
+version '2.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly files('libraries/tools.jar')
+
+    //testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    //testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(8))
+    }
+}
+
+jar {
+    archiveFileName = 'OmniscientDebugger.jar'
+}
+
+test {
+    //useJUnitPlatform()
+}
+
+task copyToQuorum(type: Copy) {
+    copy {
+        from 'build/libs/OmniscientDebugger.jar'
+        into 'dist/'
+    }
+}
