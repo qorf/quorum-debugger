@@ -1,0 +1,11 @@
+OmniscientDebugger/.gradle/
+OmniscientDebugger/dist/
+OmniscientDebugger/.idea/workspace.xml
+OmniscientDebugger/.idea/tasks.xml
+OmniscientDebugger/.idea/gradle.xml
+OmniscientDebugger/.idea/libraries
+OmniscientDebugger/.idea/modules.xml
+OmniscientDebugger/.idea/gradle.xml
+OmniscientDebugger/build/
+!gradle-wrapper.jar
+**.DS_Store
